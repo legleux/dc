@@ -1,21 +1,21 @@
 services:
   server:
     container_name: server
-    build: flasky/Dockerfile
-    image: server
+    # build: flasky/Dockerfile
+    image: legleux/server
     # command: flask --app flasky run --host 0.0.0.0 --debug
-    networks:
-      - cool
+    # networks:
+    #   - cool
 
   client:
     container_name: client
-    build: flasky_client/Dockerfile
-    image: client
-    command: check server
-    networks:
-      - cool
+    # build: flasky_client/Dockerfile
+    image: legleux/client
+    # command: check server
+    # networks:
+    #   - cool
 
-networks:
-  cool:
-    name: cool
-    external: true
+# networks:
+#   cool:
+#     name: cool
+#     external: true
